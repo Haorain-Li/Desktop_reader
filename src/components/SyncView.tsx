@@ -63,7 +63,7 @@ export function SyncView({ books, reloadData }: SyncViewProps) {
   return (
     <div className="flex-1 overflow-y-auto relative">
       <div className="px-10 pt-10 pb-6">
-        <h1 className="text-[28px] font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-none">数据同步</h1>
+        <h1 className="text-[28px] font-bold text-zinc-900 dark:text-zinc-100 tracking-tight leading-none">数据同步</h1>
         <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-2 font-medium">导入导出阅读数据和书籍文件，便于备份或迁移到其他设备</p>
       </div>
 

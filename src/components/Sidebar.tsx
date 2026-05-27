@@ -37,7 +37,7 @@ export function Sidebar({ currentView, onViewChange, bookCount, totalReadingTime
             expanded ? 'px-4 py-3.5' : 'px-0 py-3.5 justify-center'
           } ${
             currentView === 'bookshelf'
-              ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+              ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 ring-1 ring-amber-200/60 dark:ring-amber-700/40'
               : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-700/60 hover:text-zinc-800 dark:hover:text-zinc-200'
           }`}
           title="书架"
@@ -51,7 +51,7 @@ export function Sidebar({ currentView, onViewChange, bookCount, totalReadingTime
               <span className="text-base font-semibold whitespace-nowrap">书架</span>
               {bookCount > 0 && (
                 <span className={`ml-auto text-xs px-2 py-0.5 rounded-md font-bold ${
-                  currentView === 'bookshelf' ? 'bg-white/15 dark:bg-zinc-900/15 text-white/70 dark:text-zinc-900/70' : 'bg-zinc-200/80 dark:bg-zinc-600/80 text-zinc-400 dark:text-zinc-500'
+                  currentView === 'bookshelf' ? 'bg-amber-200/50 dark:bg-amber-800/30 text-amber-700 dark:text-amber-300/70' : 'bg-zinc-200/80 dark:bg-zinc-600/80 text-zinc-400 dark:text-zinc-500'
                 }`}>
                   {bookCount}
                 </span>
@@ -66,7 +66,7 @@ export function Sidebar({ currentView, onViewChange, bookCount, totalReadingTime
             expanded ? 'px-4 py-3.5' : 'px-0 py-3.5 justify-center'
           } ${
             currentView === 'stats'
-              ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+              ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 ring-1 ring-amber-200/60 dark:ring-amber-700/40'
               : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-700/60 hover:text-zinc-800 dark:hover:text-zinc-200'
           }`}
           title="统计"
@@ -85,7 +85,7 @@ export function Sidebar({ currentView, onViewChange, bookCount, totalReadingTime
             expanded ? 'px-4 py-3.5' : 'px-0 py-3.5 justify-center'
           } ${
             currentView === 'sync'
-              ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+              ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 ring-1 ring-amber-200/60 dark:ring-amber-700/40'
               : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-700/60 hover:text-zinc-800 dark:hover:text-zinc-200'
           }`}
           title="同步"
@@ -121,7 +121,7 @@ export function Sidebar({ currentView, onViewChange, bookCount, totalReadingTime
         {expanded ? (
           <div className="px-4 py-4 bg-white dark:bg-zinc-700 rounded-xl border border-zinc-100 dark:border-zinc-600">
             <div className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-2">累计阅读</div>
-            <div className="text-xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight leading-none">
+            <div className="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight leading-none">
               {formatTime(totalReadingTime)}
             </div>
           </div>

@@ -89,7 +89,7 @@ export function Bookshelf({ books, searchQuery, formatFileSize, onImport, onOpen
               onClick={() => setFilter(f.key)}
               className={`px-3.5 py-1.5 rounded-lg text-[13px] font-semibold transition-all ${
                 filter === f.key
-                  ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+                  ? 'bg-amber-600 dark:bg-amber-500 text-white'
                   : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700'
               }`}
             >
@@ -124,8 +124,8 @@ export function Bookshelf({ books, searchQuery, formatFileSize, onImport, onOpen
       <div className="flex-1 overflow-y-auto px-8 pb-6">
         {sortedBooks.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full">
-            <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-zinc-300 dark:text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+            <div className="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-amber-400 dark:text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
               </svg>
@@ -135,7 +135,7 @@ export function Bookshelf({ books, searchQuery, formatFileSize, onImport, onOpen
             </p>
             {filter === 'all' && !searchQuery && (
               <button onClick={onImport}
-                className="mt-4 flex items-center gap-2 px-5 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl text-[13px] font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 active:scale-[0.97] transition-all">
+                className="mt-4 flex items-center gap-2 px-5 py-2.5 bg-amber-600 dark:bg-amber-500 text-white rounded-xl text-[13px] font-bold hover:bg-amber-700 dark:hover:bg-amber-600 active:scale-[0.97] transition-all">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
                 </svg>
@@ -152,13 +152,13 @@ export function Bookshelf({ books, searchQuery, formatFileSize, onImport, onOpen
               ))}
               {filter === 'all' && !searchQuery && (
                 <div onClick={onImport}
-                  className="flex flex-col items-center justify-center aspect-[3/4] rounded-2xl border-2 border-dashed border-zinc-200 dark:border-zinc-700 cursor-pointer hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all group">
-                  <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-700 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-600 flex items-center justify-center transition-colors mb-2">
-                    <svg className="w-5 h-5 text-zinc-300 dark:text-zinc-500 group-hover:text-zinc-500 dark:group-hover:text-zinc-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  className="flex flex-col items-center justify-center aspect-[3/4] rounded-2xl border-2 border-dashed border-amber-200 dark:border-amber-800/40 cursor-pointer hover:border-amber-400 dark:hover:border-amber-600 hover:bg-amber-50/50 dark:hover:bg-amber-900/10 transition-all group">
+                  <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/20 group-hover:bg-amber-100 dark:group-hover:bg-amber-900/30 flex items-center justify-center transition-colors mb-2">
+                    <svg className="w-5 h-5 text-amber-400 dark:text-amber-500 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
                     </svg>
                   </div>
-                  <span className="text-xs text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors font-bold">添加书籍</span>
+                  <span className="text-xs text-amber-500 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors font-bold">添加书籍</span>
                 </div>
               )}
             </div>
