@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp *)",
+      "WebSearch",
+      "Bash(npm info *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(npm run *)",
+      "Bash(cross-env VITE_DEV_SERVER_URL=http://localhost:5173 npx electron .)",
+      "Bash(VITE_DEV_SERVER_URL=http://localhost:5173 npx electron .)",
+      "Bash(npx concurrently *)",
+      "Bash(npx cross-env *)",
+      "Bash(npm ls *)",
+      "Bash(xargs wc -l)",
+      "Bash(gh auth *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit --amend -m ' *)",
+      "Bash(git checkout *)",
+      "Bash(git branch *)",
+      "Bash(git config *)"
+    ]
+  }
+}

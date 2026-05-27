@@ -1,0 +1,36 @@
+{
+  "name": "ebook-reader",
+  "version": "1.0.0",
+  "description": "桌面端阅读器",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "tsc -p tsconfig.electron.json && concurrently -k \"vite\" \"wait-on http://localhost:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "build": "tsc -p tsconfig.electron.json && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^42.0.1",
+    "epubjs": "^0.3.93",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-pdf": "^10.4.1",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "tailwindcss": "^4.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.11",
+    "wait-on": "^9.0.5"
+  }
+}
